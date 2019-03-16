@@ -1,0 +1,10 @@
+attribute vec4 position;
+attribute vec2 vTexCords;
+varying vec2 yuvTexCoord;
+
+void main() {
+gl_Position=position;
+yuvTexCoord=vTexCords;
+}
+
+

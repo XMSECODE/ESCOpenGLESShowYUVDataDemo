@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F04EC1C7223CC3B20041DBDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F04EC1C6223CC3B20041DBDA /* AppDelegate.m */; };
+		F04EC1CA223CC3B20041DBDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04EC1C9223CC3B20041DBDA /* ViewController.m */; };
+		F04EC1CD223CC3B20041DBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1CB223CC3B20041DBDA /* Main.storyboard */; };
+		F04EC1CF223CC4030041DBDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1CE223CC4030041DBDA /* Assets.xcassets */; };
+		F04EC1D2223CC4030041DBDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1D0223CC4030041DBDA /* LaunchScreen.storyboard */; };
+		F04EC1D5223CC4030041DBDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F04EC1D4223CC4030041DBDA /* main.m */; };
+		F04EC1E3223CC9700041DBDA /* yuv_1920_1080 in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1DB223CC9700041DBDA /* yuv_1920_1080 */; };
+		F04EC1E4223CC9700041DBDA /* fragmentshader_RGB.fmsd in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1DD223CC9700041DBDA /* fragmentshader_RGB.fmsd */; };
+		F04EC1E5223CC9700041DBDA /* fragmentshader_YUV.fmsd in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1DE223CC9700041DBDA /* fragmentshader_YUV.fmsd */; };
+		F04EC1E6223CC9700041DBDA /* ESCOpenGLESView.m in Sources */ = {isa = PBXBuildFile; fileRef = F04EC1DF223CC9700041DBDA /* ESCOpenGLESView.m */; };
+		F04EC1E7223CC9700041DBDA /* vertexshader_RGB.vtsd in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1E0223CC9700041DBDA /* vertexshader_RGB.vtsd */; };
+		F04EC1E8223CC9700041DBDA /* vertexshader_YUV.vtsd in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1E2223CC9700041DBDA /* vertexshader_YUV.vtsd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F04EC1C2223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESCOpenGLESShowYUVDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04EC1C5223CC3B20041DBDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F04EC1C6223CC3B20041DBDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F04EC1C8223CC3B20041DBDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F04EC1C9223CC3B20041DBDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F04EC1CC223CC3B20041DBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F04EC1CE223CC4030041DBDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F04EC1D1223CC4030041DBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F04EC1D3223CC4030041DBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F04EC1D4223CC4030041DBDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F04EC1DB223CC9700041DBDA /* yuv_1920_1080 */ = {isa = PBXFileReference; lastKnownFileType = file; path = yuv_1920_1080; sourceTree = "<group>"; };
+		F04EC1DD223CC9700041DBDA /* fragmentshader_RGB.fmsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentshader_RGB.fmsd; sourceTree = "<group>"; };
+		F04EC1DE223CC9700041DBDA /* fragmentshader_YUV.fmsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragmentshader_YUV.fmsd; sourceTree = "<group>"; };
+		F04EC1DF223CC9700041DBDA /* ESCOpenGLESView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESCOpenGLESView.m; sourceTree = "<group>"; };
+		F04EC1E0223CC9700041DBDA /* vertexshader_RGB.vtsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexshader_RGB.vtsd; sourceTree = "<group>"; };
+		F04EC1E1223CC9700041DBDA /* ESCOpenGLESView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCOpenGLESView.h; sourceTree = "<group>"; };
+		F04EC1E2223CC9700041DBDA /* vertexshader_YUV.vtsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexshader_YUV.vtsd; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F04EC1BF223CC3B10041DBDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F04EC1B9223CC3B00041DBDA = {
+			isa = PBXGroup;
+			children = (
+				F04EC1C4223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo */,
+				F04EC1C3223CC3B10041DBDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F04EC1C3223CC3B10041DBDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F04EC1C2223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F04EC1C4223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F04EC1C5223CC3B20041DBDA /* AppDelegate.h */,
+				F04EC1C6223CC3B20041DBDA /* AppDelegate.m */,
+				F04EC1C8223CC3B20041DBDA /* ViewController.h */,
+				F04EC1C9223CC3B20041DBDA /* ViewController.m */,
+				F04EC1CB223CC3B20041DBDA /* Main.storyboard */,
+				F04EC1DC223CC9700041DBDA /* OpenGLView */,
+				F04EC1DB223CC9700041DBDA /* yuv_1920_1080 */,
+				F04EC1CE223CC4030041DBDA /* Assets.xcassets */,
+				F04EC1D0223CC4030041DBDA /* LaunchScreen.storyboard */,
+				F04EC1D3223CC4030041DBDA /* Info.plist */,
+				F04EC1D4223CC4030041DBDA /* main.m */,
+			);
+			path = ESCOpenGLESShowYUVDataDemo;
+			sourceTree = "<group>";
+		};
+		F04EC1DC223CC9700041DBDA /* OpenGLView */ = {
+			isa = PBXGroup;
+			children = (
+				F04EC1E1223CC9700041DBDA /* ESCOpenGLESView.h */,
+				F04EC1DF223CC9700041DBDA /* ESCOpenGLESView.m */,
+				F04EC1DD223CC9700041DBDA /* fragmentshader_RGB.fmsd */,
+				F04EC1E0223CC9700041DBDA /* vertexshader_RGB.vtsd */,
+				F04EC1DE223CC9700041DBDA /* fragmentshader_YUV.fmsd */,
+				F04EC1E2223CC9700041DBDA /* vertexshader_YUV.vtsd */,
+			);
+			path = OpenGLView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F04EC1C1223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F04EC1D8223CC4030041DBDA /* Build configuration list for PBXNativeTarget "ESCOpenGLESShowYUVDataDemo" */;
+			buildPhases = (
+				F04EC1BE223CC3B10041DBDA /* Sources */,
+				F04EC1BF223CC3B10041DBDA /* Frameworks */,
+				F04EC1C0223CC3B10041DBDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ESCOpenGLESShowYUVDataDemo;
+			productName = ESCOpenGLESShowYUVDataDemo;
+			productReference = F04EC1C2223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F04EC1BA223CC3B00041DBDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = xiang;
+				TargetAttributes = {
+					F04EC1C1223CC3B10041DBDA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = F04EC1BD223CC3B10041DBDA /* Build configuration list for PBXProject "ESCOpenGLESShowYUVDataDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F04EC1B9223CC3B00041DBDA;
+			productRefGroup = F04EC1C3223CC3B10041DBDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F04EC1C1223CC3B10041DBDA /* ESCOpenGLESShowYUVDataDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F04EC1C0223CC3B10041DBDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04EC1E4223CC9700041DBDA /* fragmentshader_RGB.fmsd in Resources */,
+				F04EC1D2223CC4030041DBDA /* LaunchScreen.storyboard in Resources */,
+				F04EC1CF223CC4030041DBDA /* Assets.xcassets in Resources */,
+				F04EC1E7223CC9700041DBDA /* vertexshader_RGB.vtsd in Resources */,
+				F04EC1E8223CC9700041DBDA /* vertexshader_YUV.vtsd in Resources */,
+				F04EC1CD223CC3B20041DBDA /* Main.storyboard in Resources */,
+				F04EC1E3223CC9700041DBDA /* yuv_1920_1080 in Resources */,
+				F04EC1E5223CC9700041DBDA /* fragmentshader_YUV.fmsd in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F04EC1BE223CC3B10041DBDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04EC1CA223CC3B20041DBDA /* ViewController.m in Sources */,
+				F04EC1D5223CC4030041DBDA /* main.m in Sources */,
+				F04EC1C7223CC3B20041DBDA /* AppDelegate.m in Sources */,
+				F04EC1E6223CC9700041DBDA /* ESCOpenGLESView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F04EC1CB223CC3B20041DBDA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F04EC1CC223CC3B20041DBDA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F04EC1D0223CC4030041DBDA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F04EC1D1223CC4030041DBDA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F04EC1D6223CC4030041DBDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F04EC1D7223CC4030041DBDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F04EC1D9223CC4030041DBDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ6KCMA9HH;
+				INFOPLIST_FILE = ESCOpenGLESShowYUVDataDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiang.ESCOpenGLESShowYUVDataDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F04EC1DA223CC4030041DBDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NZ6KCMA9HH;
+				INFOPLIST_FILE = ESCOpenGLESShowYUVDataDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiang.ESCOpenGLESShowYUVDataDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F04EC1BD223CC3B10041DBDA /* Build configuration list for PBXProject "ESCOpenGLESShowYUVDataDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04EC1D6223CC4030041DBDA /* Debug */,
+				F04EC1D7223CC4030041DBDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F04EC1D8223CC4030041DBDA /* Build configuration list for PBXNativeTarget "ESCOpenGLESShowYUVDataDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04EC1D9223CC4030041DBDA /* Debug */,
+				F04EC1DA223CC4030041DBDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F04EC1BA223CC3B00041DBDA /* Project object */;
+}
