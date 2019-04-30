@@ -13,6 +13,12 @@
 
 @property(nonatomic,weak)ESCOpenGLESView* openglesView;
 
+@property(nonatomic,strong)NSFileHandle* readFileHandle;
+
+@property(nonatomic,assign)int currentIndex;
+
+@property(nonatomic,weak)NSTimer* readTimer;
+
 @end
 
 @implementation ViewController
@@ -30,18 +36,33 @@
     [super viewDidAppear:animated];
     
     NSString *yuvFile = [[NSBundle mainBundle] pathForResource:@"yuv_1920_1080" ofType:nil];
-    NSData *yuvData = [NSData dataWithContentsOfFile:yuvFile];
+
+    [self showYUVDataWithRate:20
+                        width:1920
+                       height:1080
+                     filePath:yuvFile];
+}
+
+- (void)showYUVDataWithRate:(int)rate width:(int)width height:(int)height filePath:(NSString *)filePath {
     
-    int width = 1920;
-    int height = 1080;
+    self.readFileHandle = [NSFileHandle fileHandleForReadingAtPath:filePath];
+    NSInteger fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil] fileSize];
     
-    uint8_t *yuvDatat = [yuvData bytes];
-    NSData *yData = [[NSData alloc] initWithBytes:yuvDatat length:(width *height)];
-    NSData *uData = [[NSData alloc] initWithBytes:(yuvDatat + width * height) length:(width * height) / 4];
-    NSData *vData = [[NSData alloc] initWithBytes:(yuvDatat + width * height / 4 * 5) length:(width * height) / 4];
+    self.readTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 / rate repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+        unsigned long long  l =  [self.readFileHandle offsetInFile];
+        if (l >= fileSize) {
+            [timer invalidate];
+            [self.readFileHandle closeFile];
+            return ;
+        }
+        NSData *yData = [self.readFileHandle readDataOfLength:width * height];
+        NSData *uData = [self.readFileHandle readDataOfLength:width * height / 4];
+        NSData *vData = [self.readFileHandle readDataOfLength:width * height / 4];
+        
+        [self.openglesView loadYUV420PDataWithYData:yData uData:uData vData:vData width:width height:height];
+    }];
     
-    
-    [self.openglesView loadYUV420PDataWithYData:yData uData:uData vData:vData width:width height:height];
 }
 
 @end
