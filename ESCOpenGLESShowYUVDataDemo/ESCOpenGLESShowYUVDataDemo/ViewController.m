@@ -15,8 +15,6 @@
 
 @property(nonatomic,strong)NSFileHandle* readFileHandle;
 
-@property(nonatomic,assign)int currentIndex;
-
 @property(nonatomic,weak)NSTimer* readTimer;
 
 @end
@@ -34,13 +32,15 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+    //测试YUV数据
     NSString *yuvFile = [[NSBundle mainBundle] pathForResource:@"yuv_1920_1080" ofType:nil];
 
     [self showYUVDataWithRate:20
                         width:1920
                        height:1080
                      filePath:yuvFile];
+
+
 }
 
 - (void)showYUVDataWithRate:(int)rate width:(int)width height:(int)height filePath:(NSString *)filePath {
