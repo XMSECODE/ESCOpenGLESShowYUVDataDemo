@@ -14,9 +14,16 @@ typedef NS_ENUM(NSUInteger, ESCVideoDataType) {
     ESCVideoDataTypeYUV420,
 };
 
+typedef enum : NSUInteger {
+    ESCOpenGLESViewShowTypeScaleToFill,
+    ESCOpenGLESViewShowTypeAspectFit
+} ESCOpenGLESViewShowType;
+
 @interface ESCOpenGLESView : UIView
 
 @property(nonatomic,assign)ESCVideoDataType type;
+
+@property(nonatomic,assign)ESCOpenGLESViewShowType showType;
 
 - (void)loadImage:(UIImage *)image;
 

@@ -27,6 +27,7 @@
     ESCOpenGLESView *openglesView = [[ESCOpenGLESView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:openglesView];
     self.openglesView = openglesView;
+    self.openglesView.showType = ESCOpenGLESViewShowTypeAspectFit;
     self.openglesView.type = ESCVideoDataTypeYUV420;
 }
 

@@ -551,17 +551,21 @@
         CGFloat w = 0;
         CGFloat h = 0;
         
-        //获取控件宽高比，与视频宽高比
-        if (self.viewWidth / self.viewHeight * 1.0 > width / height) {
-            h = self.viewHeight;
-            w = width * h / height;
-            x = (self.viewWidth - w) / 2;
-            glViewport(x, y, w, h);
+        if (self.showType == ESCOpenGLESViewShowTypeAspectFit) {
+            //获取控件宽高比，与视频宽高比
+            if (self.viewWidth / self.viewHeight * 1.0 > width / height) {
+                h = self.viewHeight;
+                w = width * h / height;
+                x = (self.viewWidth - w) / 2;
+                glViewport(x, y, w, h);
+            }else {
+                w = self.viewWidth;
+                h = height * w / width;
+                y = (self.viewHeight - h) / 2;
+                glViewport(x, y, w, h);
+            }
         }else {
-            w = self.viewWidth;
-            h = height * w / width;
-            y = (self.viewHeight - h) / 2;
-            glViewport(x, y, w, h);
+            glViewport(x, y, self.viewWidth, self.viewHeight);
         }
         
 
