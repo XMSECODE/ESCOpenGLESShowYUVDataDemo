@@ -155,6 +155,14 @@
 }
 
 - (void)setupBuffers {
+    //检测缓存区
+    if (_frameBuffer) {
+        glDeleteFramebuffers(1, &_frameBuffer);
+    }
+    if (_renderBuffer) {
+        glDeleteRenderbuffers(1, &_renderBuffer);
+    }
+    [EAGLContext setCurrentContext:self.context];
     //创建帧缓冲区
     glGenFramebuffers(1, &_frameBuffer);
     //绑定缓冲区
