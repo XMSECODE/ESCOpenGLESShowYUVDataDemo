@@ -31,4 +31,6 @@ typedef enum : NSUInteger {
 
 - (void)loadYUV420PDataWithYData:(NSData *)yData uData:(NSData *)uData vData:(NSData *)vData width:(NSInteger)width height:(NSInteger)height;
 
+- (void)destroy;
+
 @end

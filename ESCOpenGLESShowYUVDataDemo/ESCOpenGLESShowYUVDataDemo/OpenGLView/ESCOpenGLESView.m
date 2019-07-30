@@ -81,6 +81,10 @@
 - (void)dealloc {
     NSLog(@"%@====%s",self,__FUNCTION__);
     
+    [self destroy];
+}
+
+- (void)destroy {
     if(self.context) {
         [EAGLContext setCurrentContext:nil];
     }
