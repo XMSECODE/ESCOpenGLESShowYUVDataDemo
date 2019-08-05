@@ -19,6 +19,7 @@
 		F04EC1E6223CC9700041DBDA /* ESCOpenGLESView.m in Sources */ = {isa = PBXBuildFile; fileRef = F04EC1DF223CC9700041DBDA /* ESCOpenGLESView.m */; };
 		F04EC1E7223CC9700041DBDA /* vertexshader_RGB.vtsd in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1E0223CC9700041DBDA /* vertexshader_RGB.vtsd */; };
 		F04EC1E8223CC9700041DBDA /* vertexshader_YUV.vtsd in Resources */ = {isa = PBXBuildFile; fileRef = F04EC1E2223CC9700041DBDA /* vertexshader_YUV.vtsd */; };
+		F055E81B22F8021A0097E035 /* yuv_test_100_100 in Resources */ = {isa = PBXBuildFile; fileRef = F055E81A22F8021A0097E035 /* yuv_test_100_100 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		F04EC1E0223CC9700041DBDA /* vertexshader_RGB.vtsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexshader_RGB.vtsd; sourceTree = "<group>"; };
 		F04EC1E1223CC9700041DBDA /* ESCOpenGLESView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESCOpenGLESView.h; sourceTree = "<group>"; };
 		F04EC1E2223CC9700041DBDA /* vertexshader_YUV.vtsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexshader_YUV.vtsd; sourceTree = "<group>"; };
+		F055E81A22F8021A0097E035 /* yuv_test_100_100 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yuv_test_100_100; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				F04EC1CB223CC3B20041DBDA /* Main.storyboard */,
 				F04EC1DC223CC9700041DBDA /* OpenGLView */,
 				F04EC1DB223CC9700041DBDA /* yuv_1920_1080 */,
+				F055E81A22F8021A0097E035 /* yuv_test_100_100 */,
 				F04EC1CE223CC4030041DBDA /* Assets.xcassets */,
 				F04EC1D0223CC4030041DBDA /* LaunchScreen.storyboard */,
 				F04EC1D3223CC4030041DBDA /* Info.plist */,
@@ -160,6 +163,7 @@
 				F04EC1D2223CC4030041DBDA /* LaunchScreen.storyboard in Resources */,
 				F04EC1CF223CC4030041DBDA /* Assets.xcassets in Resources */,
 				F04EC1E7223CC9700041DBDA /* vertexshader_RGB.vtsd in Resources */,
+				F055E81B22F8021A0097E035 /* yuv_test_100_100 in Resources */,
 				F04EC1E8223CC9700041DBDA /* vertexshader_YUV.vtsd in Resources */,
 				F04EC1CD223CC3B20041DBDA /* Main.storyboard in Resources */,
 				F04EC1E3223CC9700041DBDA /* yuv_1920_1080 in Resources */,

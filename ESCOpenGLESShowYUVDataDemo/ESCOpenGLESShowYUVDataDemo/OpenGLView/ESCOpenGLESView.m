@@ -141,6 +141,10 @@
                            };
 
     [eaglLayer setDrawableProperties:dict];
+    
+    [eaglLayer setOpaque:YES];
+    
+    [eaglLayer setContentsScale:[[UIScreen mainScreen] scale]];
     //创建上下文
     [self setupContext];
     
@@ -185,12 +189,16 @@
     GLint height;
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &width);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &height);
-    
+    NSLog(@"%d==%d",width,height);
     self.viewWidth = width;
     self.viewHeight = height;
     //将绘制缓冲区绑定到帧缓冲区
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _renderBuffer);
     
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     //检查状态
     GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
     if (status != GL_FRAMEBUFFER_COMPLETE) {
@@ -361,7 +369,12 @@
     //绑定纹理
     glBindTexture(GL_TEXTURE_2D, _ytexture);
     [self createYUVTextureWithData:ydata width:width height:height texture:&_ytexture];
-    
+    //纹理过滤函数
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);//放大过滤
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);//缩小过滤
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);//水平方向
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);//垂直方向
+
     void *udata = (void *)[uData bytes];
     //创建纹理
     glActiveTexture(GL_TEXTURE1);
@@ -369,6 +382,11 @@
     //绑定纹理
     glBindTexture(GL_TEXTURE_2D, _utexture);
     [self createYUVTextureWithData:udata width:width / 2 height:height / 2 texture:&_utexture];
+    //纹理过滤函数
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);//放大过滤
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);//缩小过滤
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);//水平方向
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);//垂直方向
     
     void *vdata = (void *)[vData bytes];
     
@@ -378,6 +396,11 @@
     //绑定纹理
     glBindTexture(GL_TEXTURE_2D, _vtexture);
     [self createYUVTextureWithData:vdata width:width / 2 height:height / 2 texture:&_vtexture];
+    //纹理过滤函数
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_NEAREST);//放大过滤
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_NEAREST);//缩小过滤
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);//水平方向
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);//垂直方向
     if (!_ytexture || !_ytexture || !_vtexture)
     {
         NSLog(@"glGenTextures faild.");
@@ -397,7 +420,7 @@
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     
     
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE, width, height, 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, data);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE, width , height , 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, data);
     
 }
 
